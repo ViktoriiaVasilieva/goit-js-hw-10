@@ -36,12 +36,12 @@ function onSearchInput() {
 function createMarkup(countries) {
   if (countries.length > 1 && countries.length <= 10) {
     createCountriesListMarkup(countries);
-    refs.countryList.innerHTML = '';
-    refs.countryInfo.innerHTML = markup;
+    refs.countryList.innerHTML = markup;
+    refs.countryInfo.innerHTML = '';
   } else if (countries.length === 1) {
     createCountryMarkup(countries);
-    refs.countryInfo.innerHTML = '';
-    refs.countryList.innerHTML = markup;
+    refs.countryInfo.innerHTML = markup;
+    refs.countryList.innerHTML = '';
   } else if (countries.length > 10) {
     refs.countryList.innerHTML = '';
     refs.countryInfo.innerHTML = '';
