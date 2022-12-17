@@ -16,7 +16,7 @@ let markup = '';
 
 refs.input.addEventListener(`input`, debounce(onSearchInput, DEBOUNCE_DELAY));
 
-function onSearchInput() {
+function onSearchInput(e) {
   if (!refs.input.value.trim()) {
     refs.countryList.innerHTML = '';
     refs.countryInfo.innerHTML = '';
@@ -28,7 +28,8 @@ function onSearchInput() {
     .catch(error => {
       console.log(error);
       Notiflix.Notify.failure(`Oops, there is no country with that name`);
-      refs.countryList.innerHTML = '';
+      refs.input.value = '';
+      // refs.countryList.innerHTML = '';
       // refs.countryInfo.innerHTML = '';
     });
 }
