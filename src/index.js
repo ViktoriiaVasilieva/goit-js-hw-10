@@ -29,8 +29,8 @@ function onSearchInput(e) {
       console.log(error);
       Notiflix.Notify.failure(`Oops, there is no country with that name`);
       refs.input.value = '';
-      // refs.countryList.innerHTML = '';
-      // refs.countryInfo.innerHTML = '';
+      refs.countryList.innerHTML = '';
+      refs.countryInfo.innerHTML = '';
     });
 }
 
